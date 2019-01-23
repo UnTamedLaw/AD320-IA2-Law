@@ -1,10 +1,21 @@
 <?php
+if(isset($_GET["submit"])) {
+    $name = $_GET["name"];
+    $email = $_GET["email"];
+    $phone = $_GET["number"];
+    $state= $_GET["state"];
 
-echo "<p>Welcome</p>" ; $_GET["name"];
+echo "<p>name: $name</p>" ; 
 
-echo "<p>Your Email Address is</p>" ; $_GET["email"];
+echo "Email:  " .$email ; 
 
-echo "<p> Your number is</p>" ; $_GET["phone"];
+if (isset ($phone) && !trim($phone) == ''){
+echo "<p> Number: $phone</p>" ; 
+}
+if (isset ($state) &&  !trim($state) == '') {
+echo "<p> State: $state</p>" ; 
+}
 
-echo "<p> You are from </p>" ; $_GET["state"];
+}
+
 ?>
